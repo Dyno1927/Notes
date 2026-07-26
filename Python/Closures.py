@@ -29,13 +29,15 @@ Functions can be defined inside other functions.
 The inner function can access the outer function's variables.
 """
 
+
 def outer():
     message = "Hello from outer!"
 
     def inner():
-        print(message)   # inner can see outer's variable
+        print(message)  # inner can see outer's variable
 
     inner()
+
 
 outer()
 
@@ -54,16 +56,19 @@ The inner function "closes over" the outer variables
 and keeps them alive even after outer() is done.
 """
 
+
 def make_greeter(name):
     def greet():
-        print(f"Hello, {name}!")   # name is "enclosed"
-    return greet   # return the function, not its result
+        print(f"Hello, {name}!")  # name is "enclosed"
+
+    return greet  # return the function, not its result
+
 
 greet_khanishk = make_greeter("Khanishk")
 greet_aarav = make_greeter("Aarav")
 
-greet_khanishk()   # Hello, Khanishk!
-greet_aarav()      # Hello, Aarav!
+greet_khanishk()  # Hello, Khanishk!
+greet_aarav()  # Hello, Aarav!
 
 # make_greeter() has finished — but name is still remembered!
 
@@ -72,11 +77,12 @@ greet_aarav()      # Hello, Aarav!
 # PRACTICAL: COUNTER
 # -------------------------
 
+
 def make_counter(start=0):
     """
     Each counter has its own independent count
     """
-    count = [start]   # use list so it's mutable inside inner
+    count = [start]  # use list so it's mutable inside inner
 
     def increment():
         count[0] += 1
@@ -84,13 +90,14 @@ def make_counter(start=0):
 
     return increment
 
+
 counter1 = make_counter()
 counter2 = make_counter(100)
 
-print(counter1())   # 1
-print(counter1())   # 2
-print(counter2())   # 101  — independent!
-print(counter1())   # 3
+print(counter1())  # 1
+print(counter1())  # 2
+print(counter2())  # 101  — independent!
+print(counter1())  # 3
 
 
 # -------------------------
@@ -103,37 +110,42 @@ a variable in the outer function's scope.
 (Without it, reassigning creates a new local variable.)
 """
 
+
 def make_counter_v2(start=0):
     count = start
 
     def increment():
-        nonlocal count   # tell Python: use the outer 'count'
+        nonlocal count  # tell Python: use the outer 'count'
         count += 1
         return count
 
     return increment
 
+
 c = make_counter_v2()
-print(c())   # 1
-print(c())   # 2
-print(c())   # 3
+print(c())  # 1
+print(c())  # 2
+print(c())  # 3
 
 
 # -------------------------
 # PRACTICAL: MULTIPLIER FACTORY
 # -------------------------
 
+
 def multiplier(factor):
     def multiply(n):
-        return n * factor   # factor is enclosed
+        return n * factor  # factor is enclosed
+
     return multiply
+
 
 double = multiplier(2)
 triple = multiplier(3)
 
-print(double(5))    # 10
-print(triple(5))    # 15
-print(double(10))   # 20
+print(double(5))  # 10
+print(triple(5))  # 15
+print(double(10))  # 20
 
 
 # -------------------------
@@ -145,6 +157,7 @@ A closure is like a lightweight class.
 Use a closure for simple stateful behavior.
 Use a class when it gets more complex.
 """
+
 
 # Closure version
 def make_account(balance):
@@ -158,10 +171,11 @@ def make_account(balance):
 
     return deposit, get_balance
 
+
 deposit, get_balance = make_account(1000)
-print(get_balance())   # 1000
+print(get_balance())  # 1000
 deposit(500)
-print(get_balance())   # 1500
+print(get_balance())  # 1500
 
 
 # -------------------------

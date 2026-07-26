@@ -33,6 +33,7 @@ An abstract class:
 - Can have both abstract AND normal methods
 """
 
+
 class Shape(ABC):
     """
     Abstract base class for all shapes.
@@ -42,12 +43,10 @@ class Shape(ABC):
     @abstractmethod
     def area(self):
         """Must be implemented by subclass"""
-        pass
 
     @abstractmethod
     def perimeter(self):
         """Must be implemented by subclass"""
-        pass
 
     # Normal method — shared by all subclasses
     def describe(self):
@@ -64,7 +63,7 @@ class Circle(Shape):
         self.radius = radius
 
     def area(self):
-        return 3.14159 * self.radius ** 2
+        return 3.14159 * self.radius**2
 
     def perimeter(self):
         return 2 * 3.14159 * self.radius
@@ -101,10 +100,12 @@ Python doesn't have a keyword for this, but a class
 with only @abstractmethod acts like an interface.
 """
 
+
 class Saveable(ABC):
     """
     Interface: anything that can be saved
     """
+
     @abstractmethod
     def save(self):
         pass
@@ -118,6 +119,7 @@ class Printable(ABC):
     """
     Interface: anything that can be printed
     """
+
     @abstractmethod
     def print_info(self):
         pass
@@ -157,12 +159,12 @@ You can make properties abstract too,
 forcing subclasses to define them.
 """
 
+
 class Animal(ABC):
     @property
     @abstractmethod
     def sound(self):
         """Every animal must define its sound"""
-        pass
 
     def speak(self):
         print(f"{self.__class__.__name__} says: {self.sound}")
@@ -172,6 +174,7 @@ class Dog(Animal):
     @property
     def sound(self):
         return "Woof!"
+
 
 class Cat(Animal):
     @property
@@ -192,8 +195,8 @@ isinstance() works with ABCs too.
 """
 
 c = Circle(3)
-print(isinstance(c, Shape))      # True
-print(isinstance(c, Saveable))   # False
+print(isinstance(c, Shape))  # True
+print(isinstance(c, Saveable))  # False
 
 
 # -------------------------

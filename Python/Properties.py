@@ -26,6 +26,7 @@ Turn methods into attributes while keeping control.
 # BASIC PROPERTY (GETTER)
 # -------------------------
 
+
 class Person:
     """
     Basic example of @property
@@ -49,12 +50,13 @@ class Person:
 
 
 p = Person("John", "Doe")
-print(p.fullname)   # looks like attribute, but is actually a method
+print(p.fullname)  # looks like attribute, but is actually a method
 
 
 # -------------------------
 # PROPERTY WITH SETTER
 # -------------------------
+
 
 class PersonSetter:
     """
@@ -62,7 +64,7 @@ class PersonSetter:
     """
 
     def __init__(self, name):
-        self.fullname = name   # calls setter automatically
+        self.fullname = name  # calls setter automatically
 
     @property
     def fullname(self):
@@ -90,6 +92,7 @@ print(p2.fullname)
 # -------------------------
 # PROPERTY WITH DELETER
 # -------------------------
+
 
 class PersonDeleter:
     """
@@ -127,6 +130,7 @@ del p3.fullname
 # WHY USE PROPERTIES
 # -------------------------
 
+
 class WithoutProperty:
     """
     Old way (not recommended)
@@ -156,15 +160,16 @@ class WithProperty:
 
 # Usage difference:
 obj1 = WithoutProperty("A", "B")
-print(obj1.get_fullname())   # looks like function
+print(obj1.get_fullname())  # looks like function
 
 obj2 = WithProperty("A", "B")
-print(obj2.fullname)         # looks like attribute
+print(obj2.fullname)  # looks like attribute
 
 
 # -------------------------
 # VALIDATION USING SETTER
 # -------------------------
+
 
 class Temperature:
     """
@@ -172,11 +177,11 @@ class Temperature:
     """
 
     def __init__(self, temp):
-        self.temperature = temp   # goes through setter
+        self.temperature = temp  # goes through setter
 
     @property
     def temperature(self):
-        return self._temperature   # internal variable
+        return self._temperature  # internal variable
 
     @temperature.setter
     def temperature(self, value):
@@ -196,6 +201,7 @@ print(t.temperature)
 # READ-ONLY PROPERTY
 # -------------------------
 
+
 class Circle:
     """
     Property without setter → read-only
@@ -209,7 +215,7 @@ class Circle:
         """
         Cannot assign to this directly
         """
-        return 3.14 * self.radius ** 2
+        return 3.14 * self.radius**2
 
 
 c = Circle(5)
@@ -220,13 +226,14 @@ print(c.area)
 # PRIVATE ATTRIBUTE STYLE
 # -------------------------
 
+
 class BankAccount:
     """
     Demonstrates controlled access
     """
 
     def __init__(self, balance):
-        self._balance = balance   # "protected" convention
+        self._balance = balance  # "protected" convention
 
     @property
     def balance(self):
@@ -248,6 +255,7 @@ print(acc.balance)
 # -------------------------
 # COMPUTED PROPERTIES
 # -------------------------
+
 
 class Rectangle:
     """

@@ -43,8 +43,8 @@ print(text.swapcase())
 
 # Searching
 
-print(text.find("world"))     # index or -1
-print(text.index("hello"))    # error if not found
+print(text.find("world"))  # index or -1
+print(text.index("hello"))  # error if not found
 
 # Checking
 
@@ -58,7 +58,7 @@ print(text.isupper())
 # Replace & split
 
 print(text.replace("world", "python"))
-print(text.split(" "))        # returns list
+print(text.split(" "))  # returns list
 print("-".join(["a", "b", "c"]))
 
 # Stripping
@@ -95,8 +95,8 @@ nums.insert(1, 99)
 # Removing
 
 nums.remove(99)
-nums.pop()          # last element
-nums.pop(0)         # by index
+nums.pop()  # last element
+nums.pop(0)  # by index
 nums.clear()
 
 # Recreate for more examples
@@ -159,7 +159,7 @@ s2 = {3, 4, 5}
 
 s1.add(10)
 s1.remove(1)
-s1.discard(100)   # no error if not found
+s1.discard(100)  # no error if not found
 
 # Set operations
 
@@ -353,7 +353,7 @@ You now know:
 
 """
 These methods below are some methods that are
-edge-case meaning they will be used rarely but 
+edge-case meaning they will be used rarely but
 can come handy
 """
 
@@ -389,4 +389,4 @@ print("file.txt".removesuffix(".txt"))
 print("a-b-c".partition("-"))
 
 # Encoding (advanced)
-print("hello".encode())
+print(b"hello")

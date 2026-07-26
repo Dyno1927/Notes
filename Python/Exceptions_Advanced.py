@@ -34,7 +34,7 @@ try:
 except ZeroDivisionError:
     print("Cannot divide by zero!")
 else:
-    print(f"Success! Result: {result}")   # only runs if no error
+    print(f"Success! Result: {result}")  # only runs if no error
 finally:
     print("This always runs.")
 
@@ -49,6 +49,7 @@ then broad ones. Catching Exception too early
 hides bugs.
 """
 
+
 def safe_divide(a, b):
     try:
         return a / b
@@ -58,6 +59,7 @@ def safe_divide(a, b):
     except TypeError:
         print("Both values must be numbers!")
         return None
+
 
 print(safe_divide(10, 2))
 print(safe_divide(10, 0))
@@ -99,12 +101,14 @@ Use 'raise' to trigger an exception yourself.
 Useful for validating input.
 """
 
+
 def set_age(age):
     if not isinstance(age, int):
         raise TypeError("Age must be an integer.")
     if age < 0 or age > 150:
         raise ValueError(f"Age {age} is not realistic.")
     return age
+
 
 try:
     print(set_age(25))
@@ -124,10 +128,12 @@ inheriting from Exception.
 This makes error handling more specific and readable.
 """
 
+
 class InsufficientFundsError(Exception):
     """
     Raised when account balance is too low
     """
+
     def __init__(self, amount, balance):
         self.amount = amount
         self.balance = balance
@@ -150,7 +156,7 @@ acc = BankAccount(1000)
 try:
     acc.withdraw(500)
     print("Withdrew ₹500 successfully.")
-    acc.withdraw(800)   # this will fail
+    acc.withdraw(800)  # this will fail
 except InsufficientFundsError as e:
     print(f"Custom error: {e}")
 
@@ -169,7 +175,7 @@ try:
     try:
         x = int("not a number")
     except ValueError as e:
-        raise RuntimeError("Failed to process input.") from e   # chains to original
+        raise RuntimeError("Failed to process input.") from e  # chains to original
 except RuntimeError as e:
     print(f"RuntimeError: {e}")
     print(f"Caused by: {e.__cause__}")
@@ -186,14 +192,16 @@ It calls __enter__ and __exit__ automatically.
 You can make your own context manager using a class.
 """
 
+
 class ManagedResource:
     def __enter__(self):
         print("Resource opened.")
-        return self    # what gets bound to 'as' variable
+        return self  # what gets bound to 'as' variable
 
     def __exit__(self, exc_type, exc_val, exc_tb):
         print("Resource closed (always).")
-        return False   # False means: don't suppress exceptions
+        return False  # False means: don't suppress exceptions
+
 
 with ManagedResource() as res:
     print("Using resource.")

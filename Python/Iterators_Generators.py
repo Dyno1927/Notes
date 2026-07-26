@@ -29,17 +29,18 @@ When you use a for loop, Python calls iter() then next() behind the scenes.
 """
 
 nums = [1, 2, 3]
-it = iter(nums)       # get iterator from list
+it = iter(nums)  # get iterator from list
 
-print(next(it))       # 1
-print(next(it))       # 2
-print(next(it))       # 3
+print(next(it))  # 1
+print(next(it))  # 2
+print(next(it))  # 3
 # print(next(it))     # StopIteration!
 
 
 # -------------------------
 # BUILDING A CUSTOM ITERATOR
 # -------------------------
+
 
 class CountUp:
     """
@@ -51,7 +52,7 @@ class CountUp:
         self.end = end
 
     def __iter__(self):
-        return self      # the object itself is the iterator
+        return self  # the object itself is the iterator
 
     def __next__(self):
         if self.current > self.end:
@@ -80,16 +81,18 @@ yield → pauses the function, returns a value,
         and REMEMBERS where it left off.
 """
 
+
 def count_up(start, end):
     current = start
     while current <= end:
-        yield current          # pause here, return value
-        current += 1           # resumes from here next time
+        yield current  # pause here, return value
+        current += 1  # resumes from here next time
+
 
 gen = count_up(1, 5)
 
-print(next(gen))   # 1
-print(next(gen))   # 2
+print(next(gen))  # 1
+print(next(gen))  # 2
 
 for n in count_up(1, 5):
     print(n)
@@ -126,18 +129,22 @@ yield from → delegates to another generator/iterable
 Makes it easy to chain generators
 """
 
+
 def first_half():
     yield 1
     yield 2
     yield 3
 
+
 def second_half():
     yield 4
     yield 5
 
+
 def all_numbers():
-    yield from first_half()   # delegates to first_half
+    yield from first_half()  # delegates to first_half
     yield from second_half()
+
 
 for n in all_numbers():
     print(n)
@@ -152,6 +159,7 @@ Generators can produce INFINITE sequences
 because they generate one value at a time.
 """
 
+
 def natural_numbers():
     """
     Generates 1, 2, 3, 4, ... forever
@@ -161,9 +169,10 @@ def natural_numbers():
         yield n
         n += 1
 
+
 gen = natural_numbers()
 for _ in range(5):
-    print(next(gen))   # safely get first 5
+    print(next(gen))  # safely get first 5
 
 
 # -------------------------
@@ -174,6 +183,7 @@ for _ in range(5):
 Reading a huge file line by line — memory efficient
 """
 
+
 def read_lines(filepath):
     """
     Yields one line at a time instead of loading the whole file
@@ -181,6 +191,7 @@ def read_lines(filepath):
     with open(filepath, "r") as f:
         for line in f:
             yield line.strip()
+
 
 # Usage (only works if file exists):
 # for line in read_lines("big_file.txt"):

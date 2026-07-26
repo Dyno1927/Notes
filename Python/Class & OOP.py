@@ -27,6 +27,7 @@ This is a learning + reference file.
 # BASE CLASS
 # -------------------------
 
+
 class Employee:
     """
     Base class for all employees.
@@ -56,7 +57,6 @@ class Employee:
 
         # Increment total employees count
         Employee.num_of_emps += 1
-
 
     # -------------------------
     # PROPERTIES
@@ -114,7 +114,6 @@ class Employee:
         """
         self.pay = int(self.pay * self.raise_amount)
 
-
     # -------------------------
     # MAGIC (DUNDER) METHODS
     # -------------------------
@@ -124,7 +123,7 @@ class Employee:
         Developer-friendly representation
         Used for debugging and recreating object
         """
-        return f"Employee(\"{self.first}\", \"{self.last}\", \"{self.pay}\")"
+        return f'Employee("{self.first}", "{self.last}", "{self.pay}")'
 
     def __str__(self) -> str:
         """
@@ -148,7 +147,6 @@ class Employee:
         len(emp) → length of full name
         """
         return len(self.fullname())
-
 
     # -------------------------
     # CLASS METHODS
@@ -174,7 +172,6 @@ class Employee:
         first, last, pay = emp_str.split("-")
         return cls(first, last, pay)
 
-
     # -------------------------
     # STATIC METHODS
     # -------------------------
@@ -187,13 +184,14 @@ class Employee:
         Does not access class or instance
         """
         if day.weekday() == 5 or day.weekday() == 6:
-           return False
+            return False
         return True
 
 
 # -------------------------
 # INHERITANCE
 # -------------------------
+
 
 class Developer(Employee):
     """
@@ -213,12 +211,13 @@ class Developer(Employee):
         super() → calls parent class constructor
         """
         super().__init__(first, last, pay)
-        self.prog_lang = prog_lang   # New attribute
+        self.prog_lang = prog_lang  # New attribute
 
 
 # -------------------------
 # MANAGER CLASS
 # -------------------------
+
 
 class Manager(Employee):
     """
@@ -229,7 +228,7 @@ class Manager(Employee):
     - Working with lists of objects
     """
 
-    def __init__(self, first, last, pay, employees = None) -> str | int:
+    def __init__(self, first, last, pay, employees=None) -> str | int:
         """
         Avoid mutable default argument (VERY IMPORTANT)
         """
@@ -260,6 +259,7 @@ class Manager(Employee):
         """
         for emp in self.employees:
             print("-->", emp.fullname())
+
 
 # -------------------------
 # TESTING / OBJECT CREATION

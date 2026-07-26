@@ -33,8 +33,8 @@ Python is dynamically typed → no need to declare type
 """
 
 name = "Khanishk"  # str (string)
-age = 18  # int (integer)
-height = 5.9  # float (decimal)
+age = 14  # int (integer)
+height = 5.2  # float (decimal)
 is_student = True  # bool (boolean)
 
 # type() → check data type
@@ -263,7 +263,7 @@ print(point[0])
 Sets are unordered and unique
 """
 
-nums_set = {1, 2, 3, 3}
+nums_set = {1, 2, 3}
 
 print(nums_set)  # duplicates removed
 
@@ -280,7 +280,7 @@ nums_set.remove(1)
 Key-value pairs
 """
 
-person = {"name": "Khanishk", "age": 18}
+person = {"name": "Khanishk", "age": 14}
 
 print(person["name"])
 
@@ -352,6 +352,6 @@ except ValueError:
 # -------------------------
 
 """
-This is all about the basics of python and 
+This is all about the basics of python and
 simple-good-to-know things
 """

@@ -19,9 +19,9 @@ This file covers File I/O (Input/Output):
 * Exception handling with files
 """
 
-import os
-import json
 import csv
+import json
+import os
 
 # -------------------------
 # WRITING A FILE
@@ -58,7 +58,7 @@ with open("notes.txt", "r") as f:
 # Read line by line (memory efficient for large files)
 with open("notes.txt", "r") as f:
     for line in f:
-        print(line.strip())   # strip removes trailing \n
+        print(line.strip())  # strip removes trailing \n
 
 
 # Read all lines into a list
@@ -106,13 +106,13 @@ print(f"Current dir: {cwd}")
 
 # Build a path
 file_path = Path("data") / "users.txt"
-print(file_path)   # data/users.txt
+print(file_path)  # data/users.txt
 
 # Check if exists
 print(file_path.exists())
 
 # Create directory
-Path("data").mkdir(exist_ok=True)   # no error if already exists
+Path("data").mkdir(exist_ok=True)  # no error if already exists
 
 # List files in a directory
 for f in Path(".").iterdir():
@@ -129,14 +129,10 @@ Python dicts ↔ JSON objects.
 """
 
 # Write JSON
-data = {
-    "name": "Khanishk",
-    "age": 16,
-    "skills": ["Python", "C#"]
-}
+data = {"name": "Khanishk", "age": 16, "skills": ["Python", "C#"]}
 
 with open("data.json", "w") as f:
-    json.dump(data, f, indent=4)   # indent makes it readable
+    json.dump(data, f, indent=4)  # indent makes it readable
 
 print("JSON written.")
 
