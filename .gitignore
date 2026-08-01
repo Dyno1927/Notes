@@ -1,3 +1,5 @@
 .vscode
 desktop.ini
 venv
+bin/
+obj/
