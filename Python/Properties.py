@@ -140,7 +140,7 @@ class WithoutProperty:
         self.first = first
         self.last = last
 
-    def get_fullname(self):
+    def getFullname(self):
         return f"{self.first} {self.last}"
 
 
@@ -160,7 +160,7 @@ class WithProperty:
 
 # Usage difference:
 obj1 = WithoutProperty("A", "B")
-print(obj1.get_fullname())  # looks like function
+print(obj1.getFullname())  # looks like function
 
 obj2 = WithProperty("A", "B")
 print(obj2.fullname)  # looks like attribute

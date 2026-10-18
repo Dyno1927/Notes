@@ -121,7 +121,7 @@ class Printable(ABC):
     """
 
     @abstractmethod
-    def print_info(self):
+    def printInfo(self):
         pass
 
 
@@ -139,15 +139,15 @@ class UserProfile(Saveable, Printable):
         self.age = data["age"]
         print(f"Loaded profile: {self.name}")
 
-    def print_info(self):
+    def printInfo(self):
         print(f"Name: {self.name} | Age: {self.age}")
 
 
 user = UserProfile("Khanishk", 16)
-user.print_info()
+user.printInfo()
 user.save()
 user.load({"name": "Aarav", "age": 17})
-user.print_info()
+user.printInfo()
 
 
 # -------------------------

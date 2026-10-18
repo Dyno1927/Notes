@@ -105,11 +105,11 @@ cwd = Path.cwd()
 print(f"Current dir: {cwd}")
 
 # Build a path
-file_path = Path("data") / "users.txt"
-print(file_path)  # data/users.txt
+filePath = Path("data") / "users.txt"
+print(filePath)  # data/users.txt
 
 # Check if exists
-print(file_path.exists())
+print(filePath.exists())
 
 # Create directory
 Path("data").mkdir(exist_ok=True)  # no error if already exists

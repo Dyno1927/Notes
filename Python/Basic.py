@@ -35,7 +35,7 @@ Python is dynamically typed → no need to declare type
 name = "Khanishk"  # str (string)
 age = 14  # int (integer)
 height = 5.2  # float (decimal)
-is_student = True  # bool (boolean)
+isStudent = True  # bool (boolean)
 
 # type() → check data type
 
@@ -53,10 +53,10 @@ Converting one data type to another
 """
 
 num = "100"
-num_int = int(num)  # string → int
-num_float = float(num)  # string → float
+numInt = int(num)  # string → int
+numFloat = float(num)  # string → float
 
-print(num_int + 50)
+print(numInt + 50)
 
 # -------------------------
 
@@ -263,12 +263,12 @@ print(point[0])
 Sets are unordered and unique
 """
 
-nums_set = {1, 2, 3}
+numsSet = {1, 2, 3}
 
-print(nums_set)  # duplicates removed
+print(numsSet)  # duplicates removed
 
-nums_set.add(5)
-nums_set.remove(1)
+numsSet.add(5)
+numsSet.remove(1)
 
 # -------------------------
 
@@ -326,9 +326,9 @@ print(nums)
 Takes input from user (always string)
 """
 
-user_name = input("Enter your name: ")
+userName = input("Enter your name: ")
 
-print(f"Hello {user_name}")
+print(f"Hello {userName}")
 
 # -------------------------
 

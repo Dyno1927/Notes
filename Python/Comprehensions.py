@@ -45,13 +45,13 @@ print(evens)  # [0, 2, 4, 6, 8]
 
 # Transformation
 names = ["khanishk", "aarav", "maya"]
-upper_names = [name.upper() for name in names]
-print(upper_names)
+upperNames = [name.upper() for name in names]
+print(upperNames)
 
 
 # Combined: filter + transform
-long_names = [name.title() for name in names if len(name) > 4]
-print(long_names)
+longNames = [name.title() for name in names if len(name) > 4]
+print(longNames)
 
 
 # -------------------------
@@ -64,8 +64,8 @@ Syntax:
 """
 
 # Squares as a dict
-square_dict = {x: x**2 for x in range(1, 6)}
-print(square_dict)  # {1: 1, 2: 4, 3: 9, ...}
+squareDict = {x: x**2 for x in range(1, 6)}
+print(squareDict)  # {1: 1, 2: 4, 3: 9, ...}
 
 
 # Flip a dictionary (swap keys and values)
@@ -98,8 +98,8 @@ Syntax:
 """
 
 nums = [1, 2, 2, 3, 3, 3, 4]
-unique_squares = {x**2 for x in nums}
-print(unique_squares)  # no duplicates
+uniqueSquares = {x**2 for x in nums}
+print(uniqueSquares)  # no duplicates
 
 
 # -------------------------

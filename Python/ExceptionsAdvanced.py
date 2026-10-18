@@ -50,7 +50,7 @@ hides bugs.
 """
 
 
-def safe_divide(a, b):
+def safeDivide(a, b):
     try:
         return a / b
     except ZeroDivisionError:
@@ -61,9 +61,9 @@ def safe_divide(a, b):
         return None
 
 
-print(safe_divide(10, 2))
-print(safe_divide(10, 0))
-print(safe_divide(10, "x"))
+print(safeDivide(10, 2))
+print(safeDivide(10, 0))
+print(safeDivide(10, "x"))
 
 
 # -------------------------
@@ -102,7 +102,7 @@ Useful for validating input.
 """
 
 
-def set_age(age):
+def setAge(age):
     if not isinstance(age, int):
         raise TypeError("Age must be an integer.")
     if age < 0 or age > 150:
@@ -111,8 +111,8 @@ def set_age(age):
 
 
 try:
-    print(set_age(25))
-    print(set_age(-5))
+    print(setAge(25))
+    print(setAge(-5))
 except ValueError as e:
     print(f"ValueError: {e}")
 
@@ -198,7 +198,7 @@ class ManagedResource:
         print("Resource opened.")
         return self  # what gets bound to 'as' variable
 
-    def __exit__(self, exc_type, exc_val, exc_tb):
+    def __exit__(self, excType, excVal, excTb):
         print("Resource closed (always).")
         return False  # False means: don't suppress exceptions
 

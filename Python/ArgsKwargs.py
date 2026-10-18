@@ -56,7 +56,7 @@ greet("Khanishk", "Aarav", "Maya")
 """
 
 
-def show_info(**kwargs):
+def showInfo(**kwargs):
     """
     Can accept any named arguments
     """
@@ -64,7 +64,7 @@ def show_info(**kwargs):
         print(f"{key}: {value}")
 
 
-show_info(name="Khanishk", age=16, city="Aligarh")
+showInfo(name="Khanishk", age=16, city="Aligarh")
 
 
 # -------------------------
@@ -100,7 +100,7 @@ nums = [1, 2, 3]
 print(add(*nums))  # unpacks list → add(1, 2, 3)
 
 info = {"name": "Khanishk", "age": 16}
-show_info(**info)  # unpacks dict → show_info(name="Khanishk", age=16)
+showInfo(**info)  # unpacks dict → showInfo(name="Khanishk", age=16)
 
 
 # -------------------------
@@ -108,7 +108,7 @@ show_info(**info)  # unpacks dict → show_info(name="Khanishk", age=16)
 # -------------------------
 
 
-def create_user(username, *roles, **settings):
+def createUser(username, *roles, **settings):
     """
 
     username  → required
@@ -120,7 +120,7 @@ def create_user(username, *roles, **settings):
     print(f"Settings: {settings}")
 
 
-create_user("khanishk99", "admin", "editor", theme="dark", lang="en")
+createUser("khanishk99", "admin", "editor", theme="dark", lang="en")
 
 
 # -------------------------

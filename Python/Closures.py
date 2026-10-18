@@ -57,20 +57,20 @@ and keeps them alive even after outer() is done.
 """
 
 
-def make_greeter(name):
+def makeGreeter(name):
     def greet():
         print(f"Hello, {name}!")  # name is "enclosed"
 
     return greet  # return the function, not its result
 
 
-greet_khanishk = make_greeter("Khanishk")
-greet_aarav = make_greeter("Aarav")
+greetKhanishk = makeGreeter("Khanishk")
+greetAarav = makeGreeter("Aarav")
 
-greet_khanishk()  # Hello, Khanishk!
-greet_aarav()  # Hello, Aarav!
+greetKhanishk()  # Hello, Khanishk!
+greetAarav()  # Hello, Aarav!
 
-# make_greeter() has finished — but name is still remembered!
+# makeGreeter() has finished — but name is still remembered!
 
 
 # -------------------------
@@ -78,7 +78,7 @@ greet_aarav()  # Hello, Aarav!
 # -------------------------
 
 
-def make_counter(start=0):
+def makeCounter(start=0):
     """
     Each counter has its own independent count
     """
@@ -91,8 +91,8 @@ def make_counter(start=0):
     return increment
 
 
-counter1 = make_counter()
-counter2 = make_counter(100)
+counter1 = makeCounter()
+counter2 = makeCounter(100)
 
 print(counter1())  # 1
 print(counter1())  # 2
@@ -111,7 +111,7 @@ a variable in the outer function's scope.
 """
 
 
-def make_counter_v2(start=0):
+def makeCounter_v2(start=0):
     count = start
 
     def increment():
@@ -122,7 +122,7 @@ def make_counter_v2(start=0):
     return increment
 
 
-c = make_counter_v2()
+c = makeCounter_v2()
 print(c())  # 1
 print(c())  # 2
 print(c())  # 3
@@ -160,22 +160,22 @@ Use a class when it gets more complex.
 
 
 # Closure version
-def make_account(balance):
+def makeAccount(balance):
     def deposit(amount):
         nonlocal balance
         balance += amount
         return balance
 
-    def get_balance():
+    def getBalance():
         return balance
 
-    return deposit, get_balance
+    return deposit, getBalance
 
 
-deposit, get_balance = make_account(1000)
-print(get_balance())  # 1000
+deposit, getBalance = makeAccount(1000)
+print(getBalance())  # 1000
 deposit(500)
-print(get_balance())  # 1500
+print(getBalance())  # 1500
 
 
 # -------------------------
@@ -192,7 +192,7 @@ KEY POINTS:
 5. Closures are the foundation of decorators!
 
 When to use closures:
-- Factory functions (make_greeter, multiplier)
+- Factory functions (makeGreeter, multiplier)
 - Stateful functions without a full class
 - When you need to "bake in" a value
 """

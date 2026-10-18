@@ -41,8 +41,8 @@ class Employee:
     """
 
     # Class variables (shared across ALL instances)
-    raise_amount: int = 1.05
-    num_of_emps: int = 0
+    raiseAmount: int = 1.05
+    numOf_emps: int = 0
 
     def __init__(self, first, last, pay) -> str | int:
         """
@@ -56,7 +56,7 @@ class Employee:
         self.pay = int(pay)
 
         # Increment total employees count
-        Employee.num_of_emps += 1
+        Employee.numOf_emps += 1
 
     # -------------------------
     # PROPERTIES
@@ -106,13 +106,13 @@ class Employee:
     # INSTANCE METHODS
     # -------------------------
 
-    def apply_raise(self) -> int:
+    def applyRaise(self) -> int:
         """
         Instance method → works on object data
 
         Uses class variable to update salary
         """
-        self.pay = int(self.pay * self.raise_amount)
+        self.pay = int(self.pay * self.raiseAmount)
 
     # -------------------------
     # MAGIC (DUNDER) METHODS
@@ -153,23 +153,23 @@ class Employee:
     # -------------------------
 
     @classmethod
-    def set_raise_amt(cls, amount) -> int:
+    def setRaise_amt(cls, amount) -> int:
         """
         Class method → works on class, not instance
 
         Used to modify class variables
         """
-        cls.raise_amount = amount
+        cls.raiseAmount = amount
 
     @classmethod
-    def from_string(cls, emp_str) -> str:
+    def fromString(cls, empStr) -> str:
         """
         Alternative constructor
 
         Example:
         "John-Doe-50000"
         """
-        first, last, pay = emp_str.split("-")
+        first, last, pay = empStr.split("-")
         return cls(first, last, pay)
 
     # -------------------------
@@ -177,7 +177,7 @@ class Employee:
     # -------------------------
 
     @staticmethod
-    def is_workday(day) -> bool:
+    def isWorkday(day) -> bool:
         """
         Static method → independent function inside class
 
@@ -204,14 +204,14 @@ class Developer(Employee):
     """
 
     # Override class variable
-    raise_amount = 1.10
+    raiseAmount = 1.10
 
-    def __init__(self, first, last, pay, prog_lang) -> str | int:
+    def __init__(self, first, last, pay, progLang) -> str | int:
         """
         super() → calls parent class constructor
         """
         super().__init__(first, last, pay)
-        self.prog_lang = prog_lang  # New attribute
+        self.progLang = progLang  # New attribute
 
 
 # -------------------------
@@ -239,21 +239,21 @@ class Manager(Employee):
         else:
             self.employees = employees
 
-    def add_emp(self, emp) -> str:
+    def addEmp(self, emp) -> str:
         """
         Adds employee to manager list
         """
         if emp not in self.employees:
             self.employees.append(emp)
 
-    def remove_emp(self, emp) -> str:
+    def removeEmp(self, emp) -> str:
         """
         Removes employee from manager list
         """
         if emp in self.employees:
             self.employees.remove(emp)
 
-    def print_emps(self) -> str:
+    def printEmps(self) -> str:
         """
         Prints all employees under manager
         """
@@ -268,21 +268,21 @@ class Manager(Employee):
 """
 Creating Employee objects
 """
-emp_1 = Employee("Ryusui", "Nanami", "50000")
-emp_2 = Employee("Ichigo", "Kurosaki", "60000")
+emp1 = Employee("Ryusui", "Nanami", "50000")
+emp2 = Employee("Ichigo", "Kurosaki", "60000")
 
 
 """
 Creating Developer objects
 """
-dev_1 = Developer("Orihime", "Kurosaki", "70000", "C")
-dev_2 = Developer("Ulquiora", "Cifar", "80000", "C++")
+dev1 = Developer("Orihime", "Kurosaki", "70000", "C")
+dev2 = Developer("Ulquiora", "Cifar", "80000", "C++")
 
 
 """
 Creating Manager object with employees
 """
-mgr_1 = Manager("Byakuya", "Kuchiki", "50000", [dev_1, dev_2])
+mgr1 = Manager("Byakuya", "Kuchiki", "50000", [dev1, dev2])
 
 
 # -------------------------

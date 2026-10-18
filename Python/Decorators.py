@@ -30,7 +30,7 @@ That's what makes decorators possible.
 """
 
 
-def say_hello():
+def sayHello():
     print("Hello!")
 
 
@@ -38,7 +38,7 @@ def run(func):
     func()  # calling a function passed as argument
 
 
-run(say_hello)
+run(sayHello)
 
 
 # -------------------------
@@ -53,7 +53,7 @@ A decorator is a function that:
 """
 
 
-def my_decorator(func):
+def myDecorator(func):
     def wrapper():
         print("--- Before ---")
         func()  # calls the original function
@@ -67,7 +67,7 @@ def greet():
 
 
 # Apply decorator manually:
-greet = my_decorator(greet)
+greet = myDecorator(greet)
 greet()
 
 
@@ -78,15 +78,15 @@ greet()
 """
 @ is a shortcut for wrapping.
 
-@my_decorator
+@myDecorator
 def greet(): ...
 
 is the same as:
-greet = my_decorator(greet)
+greet = myDecorator(greet)
 """
 
 
-@my_decorator
+@myDecorator
 def farewell():
     print("Goodbye!")
 
@@ -145,12 +145,12 @@ def timer(func):
 
 
 @timer
-def slow_task():
+def slowTask():
     time.sleep(0.5)
     print("Task done.")
 
 
-slow_task()
+slowTask()
 
 
 # -------------------------
@@ -158,7 +158,7 @@ slow_task()
 # -------------------------
 
 
-def require_positive(func):
+def requirePositive(func):
     """
     Ensures arguments are positive before calling function
     """
@@ -173,13 +173,13 @@ def require_positive(func):
     return wrapper
 
 
-@require_positive
-def square_root(n):
+@requirePositive
+def squareRoot(n):
     return n**0.5
 
 
-print(square_root(9))  # works
-print(square_root(-4))  # blocked by decorator
+print(squareRoot(9))  # works
+print(squareRoot(-4))  # blocked by decorator
 
 
 # -------------------------

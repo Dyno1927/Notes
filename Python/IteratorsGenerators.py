@@ -82,19 +82,19 @@ yield → pauses the function, returns a value,
 """
 
 
-def count_up(start, end):
+def countUp(start, end):
     current = start
     while current <= end:
         yield current  # pause here, return value
         current += 1  # resumes from here next time
 
 
-gen = count_up(1, 5)
+gen = countUp(1, 5)
 
 print(next(gen))  # 1
 print(next(gen))  # 2
 
-for n in count_up(1, 5):
+for n in countUp(1, 5):
     print(n)
 
 
@@ -110,10 +110,10 @@ For large data, generators are WAY more efficient.
 """
 
 # This builds a list of 1 million numbers in memory
-big_list = [x * 2 for x in range(1_000_000)]
+bigList = [x * 2 for x in range(1_000_000)]
 
 # This produces them one at a time — barely uses memory
-big_gen = (x * 2 for x in range(1_000_000))
+bigGen = (x * 2 for x in range(1_000_000))
 
 # Use sum without loading everything
 total = sum(x * 2 for x in range(1_000_000))
@@ -130,23 +130,23 @@ Makes it easy to chain generators
 """
 
 
-def first_half():
+def firstHalf():
     yield 1
     yield 2
     yield 3
 
 
-def second_half():
+def secondHalf():
     yield 4
     yield 5
 
 
-def all_numbers():
-    yield from first_half()  # delegates to first_half
-    yield from second_half()
+def allNumbers():
+    yield from firstHalf()  # delegates to firstHalf
+    yield from secondHalf()
 
 
-for n in all_numbers():
+for n in allNumbers():
     print(n)
 
 
@@ -160,7 +160,7 @@ because they generate one value at a time.
 """
 
 
-def natural_numbers():
+def naturalNumbers():
     """
     Generates 1, 2, 3, 4, ... forever
     """
@@ -170,7 +170,7 @@ def natural_numbers():
         n += 1
 
 
-gen = natural_numbers()
+gen = naturalNumbers()
 for _ in range(5):
     print(next(gen))  # safely get first 5
 
@@ -184,7 +184,7 @@ Reading a huge file line by line — memory efficient
 """
 
 
-def read_lines(filepath):
+def readLines(filepath):
     """
     Yields one line at a time instead of loading the whole file
     """
@@ -194,7 +194,7 @@ def read_lines(filepath):
 
 
 # Usage (only works if file exists):
-# for line in read_lines("big_file.txt"):
+# for line in readLines("big_file.txt"):
 #     print(line)
 
 

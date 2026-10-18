@@ -110,7 +110,7 @@ nums.sort(reverse=True)
 
 # Copying
 
-copy_nums = nums.copy()
+copyNums = nums.copy()
 
 # Info
 
