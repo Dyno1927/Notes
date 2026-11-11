@@ -130,13 +130,13 @@ class InterfacesAndDI
 
         Console.WriteLine("Using ConsoleLogger:");
         UserService service1 = new UserService(consoleLogger);
-        service1.CreateUser("Khanishk");
+        service1.CreateUser("Dyno");
 
         Console.WriteLine();
 
         Console.WriteLine("Using FileLogger (same UserService, different logger):");
         UserService service2 = new UserService(fileLogger);
         service2.CreateUser("Aarav");
-        service2.DeleteUser("Khanishk");
+        service2.DeleteUser("Dyno");
     }
 }

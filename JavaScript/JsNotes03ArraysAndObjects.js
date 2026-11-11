@@ -134,7 +134,7 @@ console.log(third); // 3
 
 // Object literal — most common way
 const person = {
-  name: "Khanishk",
+  name: "Dyno",
   age: 18,
   isStudent: true,
   greet() {
@@ -149,13 +149,13 @@ const person = {
 //  8. ACCESSING PROPERTIES
 // ─────────────────────────────────────────────
 
-console.log(person.name); // "Khanishk" — dot notation
+console.log(person.name); // "Dyno" — dot notation
 console.log(person["age"]); // 18 — bracket notation
-console.log(person.greet()); // "Hi, I'm Khanishk!"
+console.log(person.greet()); // "Hi, I'm Dyno!"
 
 // Bracket notation is useful when key is dynamic:
 const key = "name";
-console.log(person[key]); // "Khanishk"
+console.log(person[key]); // "Dyno"
 
 // ─────────────────────────────────────────────
 //  9. MODIFYING OBJECTS
@@ -172,12 +172,12 @@ console.log(person);
 // ─────────────────────────────────────────────
 
 const { name, age } = person;
-console.log(name); // "Khanishk"
+console.log(name); // "Dyno"
 console.log(age); // 19
 
 // Rename while destructuring
 const { name: fullName } = person;
-console.log(fullName); // "Khanishk"
+console.log(fullName); // "Dyno"
 
 // Default value
 const { country = "India" } = person;
@@ -225,20 +225,20 @@ console.log("brand" in car); // true
 const students = [
   { id: 1, name: "Ali", grade: 85 },
   { id: 2, name: "Sara", grade: 92 },
-  { id: 3, name: "Khanishk", grade: 78 },
+  { id: 3, name: "Dyno", grade: 78 },
 ];
 
 // Get names only
 const names = students.map((s) => s.name);
-console.log(names); // ["Ali", "Sara", "Khanishk"]
+console.log(names); // ["Ali", "Sara", "Dyno"]
 
 // Filter passing students (grade > 80)
 const passing = students.filter((s) => s.grade > 80);
 console.log(passing);
 
 // Find a specific student
-const found = students.find((s) => s.name === "Khanishk");
-console.log(found); // { id: 3, name: "Khanishk", grade: 78 }
+const found = students.find((s) => s.name === "Dyno");
+console.log(found); // { id: 3, name: "Dyno", grade: 78 }
 
 // Sort by grade descending
 const ranked = [...students].sort((a, b) => b.grade - a.grade);

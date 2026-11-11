@@ -64,10 +64,10 @@ def makeGreeter(name):
     return greet  # return the function, not its result
 
 
-greetKhanishk = makeGreeter("Khanishk")
+greetDyno = makeGreeter("Dyno")
 greetAarav = makeGreeter("Aarav")
 
-greetKhanishk()  # Hello, Khanishk!
+greetDyno()  # Hello, Dyno!
 greetAarav()  # Hello, Aarav!
 
 # makeGreeter() has finished — but name is still remembered!

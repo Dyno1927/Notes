@@ -89,7 +89,7 @@ class StaticKeyword
 
         // Static field: shared across all instances
         Console.WriteLine("-- Static Field (shared counter) --");
-        Player p1 = new Player("Khanishk");
+        Player p1 = new Player("Dyno");
         Player p2 = new Player("Aarav");
         Player p3 = new Player("Maya");
 

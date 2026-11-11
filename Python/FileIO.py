@@ -129,7 +129,7 @@ Python dicts ↔ JSON objects.
 """
 
 # Write JSON
-data = {"name": "Khanishk", "age": 16, "skills": ["Python", "C#"]}
+data = {"name": "Dyno", "age": 16, "skills": ["Python", "C#"]}
 
 with open("data.json", "w") as f:
     json.dump(data, f, indent=4)  # indent makes it readable
@@ -157,7 +157,7 @@ Common for spreadsheet data.
 # Write CSV
 students = [
     ["Name", "Age", "Grade"],
-    ["Khanishk", 16, "A"],
+    ["Dyno", 16, "A"],
     ["Aarav", 17, "B"],
     ["Maya", 18, "A+"],
 ]

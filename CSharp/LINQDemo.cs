@@ -34,7 +34,7 @@ class LINQDemo
 
         List<Student2> students = new List<Student2>
         {
-            new Student2("Khanishk", 16, 88.5, "Math"),
+            new Student2("Dyno", 16, 88.5, "Math"),
             new Student2("Aarav",    17, 72.0, "Science"),
             new Student2("Maya",     18, 95.0, "Math"),
             new Student2("Riya",     16, 61.5, "English"),

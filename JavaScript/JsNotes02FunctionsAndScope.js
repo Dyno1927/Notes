@@ -10,7 +10,7 @@
 function greet(name) {
   return `Hello, ${name}!`;
 }
-console.log(greet("Khanishk")); // Hello, Khanishk!
+console.log(greet("Dyno")); // Hello, Dyno!
 
 // 💡 Function declarations are "hoisted" — you can call them BEFORE they're defined
 sayHi(); // works fine!
@@ -26,7 +26,7 @@ function sayHi() {
 const greet2 = function (name) {
   return `Hey, ${name}!`;
 };
-console.log(greet2("Khanishk"));
+console.log(greet2("Dyno"));
 
 // 💡 NOT hoisted — must be defined before use
 // 💡 Treat functions as values — you can pass them around like variables!
@@ -65,8 +65,8 @@ function greetUser(name = "Guest", lang = "JS") {
 }
 
 console.log(greetUser()); // Hello Guest, welcome to JS!
-console.log(greetUser("Khanishk")); // Hello Khanishk, welcome to JS!
-console.log(greetUser("Khanishk", "C#")); // Hello Khanishk, welcome to C#!
+console.log(greetUser("Dyno")); // Hello Dyno, welcome to JS!
+console.log(greetUser("Dyno", "C#")); // Hello Dyno, welcome to C#!
 
 // 💡 Same as Python default args and C# optional parameters!
 

@@ -8,7 +8,7 @@ class Basics
         Console.WriteLine();
 
         // Variables
-        string name = "Khanishk";
+        string name = "Dyno";
         int age = 16;
         double height = 5.8;
         bool isStudent = true;

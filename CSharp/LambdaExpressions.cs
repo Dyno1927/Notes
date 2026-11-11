@@ -29,7 +29,7 @@ class LambdaExpressions
 
         Console.WriteLine($"Square of 6:         {square(6)}");
         Console.WriteLine($"Add 3 + 4:           {add(3, 4)}");
-        Console.WriteLine($"Is 'Khanishk' long?  {isLong("Khanishk")}");
+        Console.WriteLine($"Is 'Dyno' long?  {isLong("Dyno")}");
 
         Console.WriteLine();
 
@@ -40,7 +40,7 @@ class LambdaExpressions
             Console.WriteLine($"{name} is {age} years old.");
         };
 
-        greet("Khanishk");
+        greet("Dyno");
         describe("Maya", 18);
 
         Console.WriteLine();

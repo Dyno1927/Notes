@@ -143,7 +143,7 @@ class UserProfile(Saveable, Printable):
         print(f"Name: {self.name} | Age: {self.age}")
 
 
-user = UserProfile("Khanishk", 16)
+user = UserProfile("Dyno", 16)
 user.printInfo()
 user.save()
 user.load({"name": "Aarav", "age": 17})

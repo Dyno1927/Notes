@@ -93,7 +93,7 @@ class StructVsClass
         // --- Class: reference copy behavior ---
         Console.WriteLine("-- CLASS: Reference Copy (same object) --");
 
-        PersonRef person1 = new PersonRef("Khanishk", 16);
+        PersonRef person1 = new PersonRef("Dyno", 16);
         PersonRef person2 = person1;   // REFERENCE: both point to SAME object
 
         person2.Name = "Aarav";         // change through person2...

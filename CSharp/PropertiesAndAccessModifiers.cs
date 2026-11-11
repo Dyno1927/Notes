@@ -125,7 +125,7 @@ class PropertiesAndAccessModifiers
         Console.WriteLine("=== PROPERTIES & ACCESS MODIFIERS ===");
         Console.WriteLine();
 
-        BankAccount account = new BankAccount("Khanishk", "ACC-001", 1000);
+        BankAccount account = new BankAccount("Dyno", "ACC-001", 1000);
         Console.WriteLine(account);
         Console.WriteLine();
 

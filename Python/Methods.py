@@ -70,7 +70,7 @@ print(msg.rstrip())
 
 # Formatting
 
-name = "Khanishk"
+name = "Dyno"
 age = 18
 print(f"My name is {name} and I am {age}")
 
@@ -187,7 +187,7 @@ s1.clear()
 Key-value pairs.
 """
 
-person = {"name": "Khanishk", "age": 18}
+person = {"name": "Dyno", "age": 18}
 
 # Access
 
@@ -208,7 +208,7 @@ person.clear()
 
 # Recreate
 
-person = {"name": "Khanishk", "age": 18}
+person = {"name": "Dyno", "age": 18}
 
 # Views
 
@@ -374,7 +374,7 @@ print(text.casefold())
 print("hello\tworld".expandtabs(4))
 
 # Formatting (older way)
-print("My name is {}".format("Khanishk"))
+print("My name is {}".format("Dyno"))
 
 # Checks
 print("123".isdecimal())

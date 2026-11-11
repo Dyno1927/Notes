@@ -44,7 +44,7 @@ def greet(*names):
         print(f"Hello, {name}!")
 
 
-greet("Khanishk", "Aarav", "Maya")
+greet("Dyno", "Aarav", "Maya")
 
 
 # -------------------------
@@ -64,7 +64,7 @@ def showInfo(**kwargs):
         print(f"{key}: {value}")
 
 
-showInfo(name="Khanishk", age=16, city="Aligarh")
+showInfo(name="Dyno", age=16, city="Aligarh")
 
 
 # -------------------------
@@ -85,7 +85,7 @@ def profile(name, *hobbies, **details):
     print(f"Details: {details}")  # dict
 
 
-profile("Khanishk", "coding", "gaming", age=16, city="Aligarh")
+profile("Dyno", "coding", "gaming", age=16, city="Aligarh")
 
 
 # -------------------------
@@ -99,8 +99,8 @@ You can also UNPACK a list/dict into a function using * and **
 nums = [1, 2, 3]
 print(add(*nums))  # unpacks list → add(1, 2, 3)
 
-info = {"name": "Khanishk", "age": 16}
-showInfo(**info)  # unpacks dict → showInfo(name="Khanishk", age=16)
+info = {"name": "Dyno", "age": 16}
+showInfo(**info)  # unpacks dict → showInfo(name="Dyno", age=16)
 
 
 # -------------------------

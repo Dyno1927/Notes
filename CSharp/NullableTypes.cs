@@ -41,7 +41,7 @@ class NullableTypes
         string name = nickname ?? "Unknown";
         Console.WriteLine($"Name: {name}");
 
-        nickname = "Khanishk";
+        nickname = "Dyno";
         name = nickname ?? "Unknown";
         Console.WriteLine($"Name: {name}");
 
@@ -81,7 +81,7 @@ class NullableTypes
 
         // --- Practical example: optional user profile ---
         Console.WriteLine("-- Practical: Optional Profile Fields --");
-        ShowProfile("Khanishk", age: 16, phone: null, score: null);
+        ShowProfile("Dyno", age: 16, phone: null, score: null);
         ShowProfile("Aarav", age: 17, phone: "9876543210", score: 88.5);
     }
 

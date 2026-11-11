@@ -16,7 +16,7 @@ const fixed = "cannot change";
 //  2. TEMPLATE LITERALS
 // ─────────────────────────────────────────────
 
-const name = "Khanishk";
+const name = "Dyno";
 const score = 95;
 
 // Old way
@@ -57,7 +57,7 @@ console.log(carBrand); // "Honda"
 function displayUser({ name, age, role = "user" }) {
   console.log(`${name}, ${age}, ${role}`);
 }
-displayUser({ name: "Khanishk", age: 18 });
+displayUser({ name: "Dyno", age: 18 });
 
 // Swap variables (cool trick!)
 let x = 1,
@@ -143,7 +143,7 @@ console.log(user?.greet?.()); // undefined — safely calls method if exists
 //  8. ENHANCED OBJECT LITERALS
 // ─────────────────────────────────────────────
 
-const playerName = "Khanishk";
+const playerName = "Dyno";
 const playerScore = 100;
 
 // Old way

@@ -76,13 +76,13 @@ print(flipped)  # {1: 'a', 2: 'b', 3: 'c'}
 
 # From two lists
 keys = ["name", "age", "city"]
-values = ["Khanishk", 16, "Aligarh"]
+values = ["Dyno", 16, "Aligarh"]
 profile = {k: v for k, v in zip(keys, values)}
 print(profile)
 
 
 # With condition
-scores = {"Khanishk": 88, "Aarav": 55, "Maya": 92}
+scores = {"Dyno": 88, "Aarav": 55, "Maya": 92}
 passed = {name: score for name, score in scores.items() if score >= 60}
 print(passed)
 

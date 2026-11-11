@@ -34,7 +34,7 @@ class StringFormattingDemo
 
         // Positive number = right align, negative = left align
         Console.WriteLine($"|{"Name",10}|{"Score",8}|");       // right aligned
-        Console.WriteLine($"|{"Khanishk",-10}|{95,8}|");
+        Console.WriteLine($"|{"Dyno",-10}|{95,8}|");
         Console.WriteLine($"|{"Aarav",-10}|{82,8}|");
         Console.WriteLine($"|{"Maya",-10}|{91,8}|");
 
@@ -43,7 +43,7 @@ class StringFormattingDemo
         // --- String.Format (older but still useful) ---
         Console.WriteLine("-- String.Format --");
 
-        string result = String.Format("Name: {0,-10} | Score: {1:F1} | Grade: {2}", "Khanishk", 88.5, "A");
+        string result = String.Format("Name: {0,-10} | Score: {1:F1} | Grade: {2}", "Dyno", 88.5, "A");
         Console.WriteLine(result);
 
         Console.WriteLine();
@@ -68,8 +68,8 @@ class StringFormattingDemo
         // No need to escape backslashes
         Console.WriteLine("-- Verbatim Strings (@) --");
 
-        string path1 = "C:\\Users\\Khanishk\\Documents";    // needs \\
-        string path2 = @"C:\Users\Khanishk\Documents";       // cleaner!
+        string path1 = "C:\\Users\\Dyno\\Documents";    // needs \\
+        string path2 = @"C:\Users\Dyno\Documents";       // cleaner!
 
         Console.WriteLine(path1);
         Console.WriteLine(path2);

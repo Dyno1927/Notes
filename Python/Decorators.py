@@ -63,7 +63,7 @@ def myDecorator(func):
 
 
 def greet():
-    print("Hello, Khanishk!")
+    print("Hello, Dyno!")
 
 
 # Apply decorator manually:

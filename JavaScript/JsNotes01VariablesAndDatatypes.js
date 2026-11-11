@@ -10,7 +10,7 @@
 
 var oldWay = "avoid this"; // ❌ outdated, has weird scoping issues
 let age = 18; // ✅ use for values that CHANGE
-const name = "Khanishk"; // ✅ use for values that DON'T change
+const name = "Dyno"; // ✅ use for values that DON'T change
 
 // 💡 Coming from C#: think of const like `readonly`, let like a normal variable
 // 💡 Coming from Python: JS needs let/const — no naked assignment like x = 5
@@ -81,7 +81,7 @@ console.log(null === undefined); // false ← strict: different types
 //  6. STRING FEATURES
 // ─────────────────────────────────────────────
 
-let firstName = "Khanishk";
+let firstName = "Dyno";
 let lang = "JavaScript";
 
 // Concatenation (old way)
@@ -89,7 +89,7 @@ let msg1 = "Hello, " + firstName + "!";
 
 // Template Literals (modern, ES6+) ← use this!
 let msg2 = `Hello, ${firstName}! Welcome to ${lang}.`;
-console.log(msg2); // Hello, Khanishk! Welcome to JavaScript.
+console.log(msg2); // Hello, Dyno! Welcome to JavaScript.
 
 // Multi-line strings
 let multiLine = `

@@ -32,7 +32,7 @@ Use this as a reference + revision file.
 Python is dynamically typed → no need to declare type
 """
 
-name = "Khanishk"  # str (string)
+name = "Dyno"  # str (string)
 age = 14  # int (integer)
 height = 5.2  # float (decimal)
 isStudent = True  # bool (boolean)
@@ -202,7 +202,7 @@ def greet(name):
     return f"Hello {name}"
 
 
-print(greet("Khanishk"))
+print(greet("Dyno"))
 
 """
 Default parameters
@@ -280,7 +280,7 @@ numsSet.remove(1)
 Key-value pairs
 """
 
-person = {"name": "Khanishk", "age": 14}
+person = {"name": "Dyno", "age": 14}
 
 print(person["name"])
 
